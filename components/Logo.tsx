@@ -7,10 +7,10 @@ const Logo = () => {
   const router = useRouter();
 
   return (
-    <div className="flex items-center w-full min-h-20 h-20 px-6 border-r cursor-pointer gap-2"
+    <div className="flex items-center min-h-20 h-20 px-6 border-b  gap-2"
       onClick={() => router.push("/")}
     >
-      <Image src="logo2.svg" alt="logo" width={30} height={30} priority />
+      <Image src="logo2.svg" alt="logo" width={50} height={50} priority className="dark:invert"/>
       <h1 className="font-bold text-xl">ManiaManager</h1>
     </div>
   )
