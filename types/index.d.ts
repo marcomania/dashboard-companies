@@ -15,3 +15,9 @@ export type CustomIconProps = {
 export type CustomTootipProps = {
   content: string
 }
+
+export type SidebarItemProps = {
+  icon: LucideIcon
+  label: string
+  href: string
+}
