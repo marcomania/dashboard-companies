@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
 import CardSummary from "./components/CardSummary";
+import LastCustomers from "./components/LastCustomers";
+import SalesDistributors from "./components/SalesDistributors";
 import { BookOpenCheck, UsersRound, Waypoints } from "lucide-react";
 
 const dataCardSummary = [
@@ -35,7 +35,11 @@ export default function Home() {
         {dataCardSummary.map((item, index) => (
           <CardSummary key={index} {...item} />
         ))}
-      </div>   
+      </div>
+      <div className="grid grid-cols xl:grid-cols-2 md:gap-x-10 mt-12">
+        <LastCustomers />
+        <SalesDistributors/>
+      </div>
     </div>
   );
 }
