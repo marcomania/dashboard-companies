@@ -2,6 +2,7 @@ import CardSummary from "./components/CardSummary";
 import LastCustomers from "./components/LastCustomers";
 import SalesDistributors from "./components/SalesDistributors";
 import { BookOpenCheck, UsersRound, Waypoints } from "lucide-react";
+import TotalSuscribers from "./components/TotalSuscribers";
 
 const dataCardSummary = [
   {
@@ -36,9 +37,13 @@ export default function Home() {
           <CardSummary key={index} {...item} />
         ))}
       </div>
-      <div className="grid grid-cols xl:grid-cols-2 md:gap-x-10 mt-12">
+      <div className="grid grid-cols-1 xl:grid-cols-2 md:gap-x-10 mt-12">
         <LastCustomers />
         <SalesDistributors/>
+      </div>
+      <div className="flex-col xl:flex xl:flex-row gap-y-4 md:gap-y-0 mt-12 md:mb-10 justify-center">
+        <TotalSuscribers />
+        <p className="">List integrations</p>
       </div>
     </div>
   );
